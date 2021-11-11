@@ -25,13 +25,21 @@ async function main(): Promise<void> {
     await tokenOneToken.deployed();
     console.log(`🏆 TokenOne deployed ➡️ ` + `\t\t\t` + `${tokenTwoToken.address}`);
 
+    const WETHFactory: ContractFactory = await ethers.getContractFactory('WETH');
+    const wethAddress: Contract = await WETHFactory.deploy();
+    await wethAddress.deployed();
+    console.log(`🏆 WETH deployed ➡️ ` + `\t\t\t` + `${wethAddress.address}`);
+
     const UniswapV2Factory: ContractFactory = await ethers.getContractFactory('UniswapV2Factory');
     const uniswapV2: Contract = await UniswapV2Factory.deploy(ETH_PUBLIC_KEY);    
     await uniswapV2.deployed();
     console.log(`🏆 UniswapV2Factory 🏭 deployed ➡️ ` + `\t` + `${uniswapV2.address}`);
    
-    const UniswapV2Router: ContractFactory = await ethers.getContractFactory('UniswapV2Router');
-    const uniswapV2Router: Contract = await UniswapV2Router.deploy();
+    const UniswapV2Router: ContractFactory = await ethers.getContractFactory('UniswapV2Router02');
+    const uniswapV2Router: Contract = await UniswapV2Router.deploy(
+        uniswapV2.address,
+        wethAddress.address
+    );
     await uniswapV2Router.deployed();
     console.log(`🏆 UniswapV2Router 🏭 deployed ➡️ ` + `\t` + `${uniswapV2Router.address}`);
 }

@@ -50,22 +50,22 @@ library BitMath {
         } else {
             x >>= 128;
         }
-        if (x & uint64(-1) > 0) {
+        if (x & 2**64-1 > 0) {
             r -= 64;
         } else {
             x >>= 64;
         }
-        if (x & uint32(-1) > 0) {
+        if (x & 2**32-1 > 0) {
             r -= 32;
         } else {
             x >>= 32;
         }
-        if (x & uint16(-1) > 0) {
+        if (x & 2**16-1 > 0) {
             r -= 16;
         } else {
             x >>= 16;
         }
-        if (x & uint8(-1) > 0) {
+        if (x & 2**8-1 > 0) {
             r -= 8;
         } else {
             x >>= 8;

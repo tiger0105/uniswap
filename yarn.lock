@@ -1070,7 +1070,6 @@ __metadata:
     "@types/node": ^15.6.1
     "@typescript-eslint/eslint-plugin": ^4.25.0
     "@typescript-eslint/parser": ^4.25.0
-    "@uniswap/lib": ^4.0.1-alpha
     "@uniswap/v2-core": ^1.0.1
     chai: ^4.3.4
     commitizen: ^4.2.4
@@ -1769,13 +1768,6 @@ __metadata:
   version: 1.1.2
   resolution: "@ungap/promise-all-settled@npm:1.1.2"
   checksum: be6c80a2fcea2fc4ed9ccf707da9837c2f501ba21312bf9b39f8b0c4ac7e581ed37909f4f64f8dab0c51c0ae5bdf2a45b59d9a215050876b3f27e6844dba30b6
-  languageName: node
-  linkType: hard
-
-"@uniswap/lib@npm:^4.0.1-alpha":
-  version: 4.0.1-alpha
-  resolution: "@uniswap/lib@npm:4.0.1-alpha"
-  checksum: ce30f7f6dde6d7c955267dc1a631874aaab4df2b591550c334acf70935da8fc27802998e4d585641feac8277c221babd31c16d4038a5c812de4d9f6e969061b4
   languageName: node
   linkType: hard
 
